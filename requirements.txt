@@ -1,0 +1,4 @@
+ragstack-ai
+openai
+flask
+python-dotenv
