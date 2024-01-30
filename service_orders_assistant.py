@@ -103,7 +103,7 @@ tools = [get_service_orders, get_service_order_detail]
 
 astraVectorScore = AstraDBVectorStore(
     embedding=OpenAIEmbeddings(),
-    collection_name=f"vector_context_comgas",
+    collection_name=f"vector_context",
     token=os.environ["ASTRA_TOKEN"],
     api_endpoint=os.environ["ASTRA_API_ENDPOINT"],
 )
@@ -138,7 +138,7 @@ Action Input: the input to the action in JSON format without comments.
 Observation: the result of the action
 ... (this Thought/Action/Action Input/Observation can repeat N times)
 Thought: I now know the final answer
-Final Answer: Write an email to explain to the customer your findings. Sign the email as 'Comgas'
+Final Answer: Write an email to explain to the customer your findings. Sign the email as 'Customer X'
 
 Begin!
 

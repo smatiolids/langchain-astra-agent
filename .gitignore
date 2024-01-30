@@ -2,3 +2,4 @@
 comgas-ragstack
 virtual-env.md
 pdf/*
+__pycache__
