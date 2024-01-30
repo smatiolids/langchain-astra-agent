@@ -20,7 +20,6 @@ from langchain.vectorstores import AstraDB as AstraDBVectorStore
 from langchain.embeddings import OpenAIEmbeddings
 import re
 
-USE_CASE = 'latam_airlines'
 CUSTOMER_ID = 'f08a6894-1863-491d-8116-3945fb915597'  # Mocked for testing
 ASTRA_URL = f'{os.environ["ASTRA_API_ENDPOINT"]}/api/rest/v2/keyspaces/{os.environ["ASTRA_KEYSPACE"]}'
 astra_db = AstraDB(
@@ -138,7 +137,7 @@ tools = [get_customer_feature, get_scheduled_flights, get_flight_detail]
 
 astraVectorScore = AstraDBVectorStore(
     embedding=OpenAIEmbeddings(),
-    collection_name=f"vector_context_{USE_CASE}",
+    collection_name=f"vector_context",
     token=os.environ["ASTRA_TOKEN"],
     api_endpoint=os.environ["ASTRA_API_ENDPOINT"],
 )
